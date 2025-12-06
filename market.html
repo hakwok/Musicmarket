@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicMarket - Ticket Resale Market</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>MusicMarket</h1>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Explore</a>
+                <a href="market.html" class="nav-link active">Market</a>
+                <a href="transfer.html" class="nav-link">Transfer</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn-secondary">Sign In</button>
+                <button class="btn-primary">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a> / <a href="market.html">Market</a> / <span id="eventName">Taylor Swift - The Eras Tour</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="market-main">
+        <div class="container market-container">
+            <!-- Left Column - Event Info -->
+            <div class="market-left">
+                <div class="event-image-container">
+                    <img src="https://via.placeholder.com/600x600/B91C1C/FFFFFF?text=Taylor+Swift" alt="Event Image" class="event-image" id="eventImage">
+                </div>
+                <div class="event-details">
+                    <h1 class="event-title" id="eventTitle">Taylor Swift - The Eras Tour</h1>
+                    <p class="event-venue" id="eventVenue">Madison Square Garden</p>
+                    <p class="event-date" id="eventDate">Saturday, March 15, 2024 at 8:00 PM</p>
+                    <div class="event-tags">
+                        <span class="tag">Pop</span>
+                        <span class="tag">Concert</span>
+                    </div>
+                </div>
+                
+                <!-- Venue Map -->
+                <div class="venue-map-container">
+                    <h3>Venue Map</h3>
+                    <div class="venue-map">
+                        <img src="https://mapsapi.tmol.io/maps/geometry/3/event/160062C683F711C6/staticImage?systemId=HOST&sectionLevel=true&app=PRD2663_EDP_NA&sectionColor=727272&avertaFonts=true" alt="Venue Map" class="venue-map-image">
+                    </div>
+                    <div class="map-legend">
+                        <div class="legend-item">
+                            <span class="legend-color floor-a"></span>
+                            <span>Floor A</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color floor-b"></span>
+                            <span>Floor B</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color lower"></span>
+                            <span>Lower Level</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color upper"></span>
+                            <span>Upper Level</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Market Data -->
+            <div class="market-right">
+                <div class="market-header">
+                    <h2>Market Data</h2>
+                    <div class="market-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Last Sale</span>
+                            <span class="stat-value" id="lastSale">$450</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">24h Avg</span>
+                            <span class="stat-value" id="avgPrice">$425</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">24h Vol</span>
+                            <span class="stat-value" id="volume">127</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Price Chart Placeholder -->
+                <div class="price-chart">
+                    <h3>Price History</h3>
+                    <div class="chart-container">
+                        <canvas id="priceChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Size/Price Selection -->
+                <div class="size-selection">
+                    <h3>Select Section</h3>
+                    <div class="size-options" id="sizeOptions">
+                        <!-- Options will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Buy/Sell Options -->
+                <div class="buy-sell-section">
+                    <div class="buy-sell-tabs">
+                        <button class="tab-btn active" data-tab="buy">Buy Now</button>
+                        <button class="tab-btn" data-tab="sell">Sell</button>
+                    </div>
+                    <div class="tab-content active" id="buyTab">
+                        <div class="price-list" id="buyList">
+                            <!-- Buy options will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="tab-content" id="sellTab">
+                        <div class="sell-form">
+                            <label>Your Price</label>
+                            <input type="number" placeholder="Enter price" class="price-input">
+                            <label>Quantity</label>
+                            <input type="number" placeholder="1" class="price-input" value="1">
+                            <button type="button" class="btn-primary btn-block" id="listForSaleBtn">List for Sale</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Market Activity -->
+        <div class="container">
+            <div class="market-activity">
+                <h2>Recent Activity</h2>
+                <div class="activity-list" id="activityList">
+                    <!-- Activity will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>MusicMarket</h4>
+                    <p>Discover shows with confidence.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <a href="https://www.ticketmaster.com/">About</a>
+                    <a href="https://www.ticketmaster.com/">Careers</a>
+                    <a href="https://www.ticketmaster.com/">Press</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="https://www.ticketmaster.com/">Help Center</a>
+                    <a href="https://www.ticketmaster.com/">Contact Us</a>
+                    <a href="https://www.ticketmaster.com/">FAQs</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="https://www.ticketmaster.com/">Terms</a>
+                    <a href="https://www.ticketmaster.com/">Privacy</a>
+                    <a href="https://www.ticketmaster.com/">Cookies</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MusicMarket. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="market.js"></script>
+</body>
+</html>
+
