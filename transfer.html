@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicMarket - Transfer Tickets</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>MusicMarket</h1>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Explore</a>
+                <a href="market.html" class="nav-link">Market</a>
+                <a href="transfer.html" class="nav-link active">Transfer</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn-secondary">Sign In</button>
+                <button class="btn-primary">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="transfer-main">
+        <div class="container transfer-container">
+            <div class="transfer-header">
+                <h1>Transfer Your Tickets</h1>
+                <p>Send tickets to friends, family, or anyone you choose</p>
+            </div>
+
+            <div class="transfer-content">
+                <!-- Left: Ticket Selection -->
+                <div class="transfer-left">
+                    <h2>Select Tickets</h2>
+                    <div class="ticket-selection" id="ticketSelection">
+                        <!-- Tickets will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Right: Transfer Form -->
+                <div class="transfer-right">
+                    <div class="transfer-form-container">
+                        <h2>Recipient Information</h2>
+                        <form class="transfer-form" id="transferForm">
+                            <div class="form-group">
+                                <label for="recipientEmail">Recipient Email</label>
+                                <input type="email" id="recipientEmail" placeholder="email@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="recipientName">Recipient Name</label>
+                                <input type="text" id="recipientName" placeholder="Full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Personal Message (Optional)</label>
+                                <textarea id="message" rows="4" placeholder="Add a personal message..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" required>
+                                    <span>I confirm that I want to transfer these tickets</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn-primary btn-block">Transfer Tickets</button>
+                        </form>
+                    </div>
+
+                    <!-- Transfer Summary -->
+                    <div class="transfer-summary">
+                        <h3>Transfer Summary</h3>
+                        <div class="summary-content" id="transferSummary">
+                            <p>No tickets selected</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transfer Instructions -->
+            <div class="transfer-info">
+                <h3>How It Works</h3>
+                <div class="info-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h4>Select Tickets</h4>
+                        <p>Choose the tickets you want to transfer</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h4>Enter Recipient</h4>
+                        <p>Provide the recipient's email and name</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h4>Confirm Transfer</h4>
+                        <p>Review and confirm your transfer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>MusicMarket</h4>
+                    <p>Discover shows with confidence.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <a href="https://www.ticketmaster.com/">About</a>
+                    <a href="https://www.ticketmaster.com/">Careers</a>
+                    <a href="https://www.ticketmaster.com/">Press</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="https://www.ticketmaster.com/">Help Center</a>
+                    <a href="https://www.ticketmaster.com/">Contact Us</a>
+                    <a href="https://www.ticketmaster.com/">FAQs</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="https://www.ticketmaster.com/">Terms</a>
+                    <a href="https://www.ticketmaster.com/">Privacy</a>
+                    <a href="https://www.ticketmaster.com/">Cookies</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MusicMarket. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="transfer.js"></script>
+</body>
+</html>
+
